@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head><title>Lucie Chloé Romano</title></head>
+<head>
+  <meta charset="utf-8"/>
+  <title>Lucie Chloé Romano</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
 <body>
-<h1>Coming soon</h1>
+  <h1>Lucie Chloé Romano</h1>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
